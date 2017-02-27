@@ -94,6 +94,7 @@ function runTests (steps) {
         if (err) return cb(err)
 
         test(step.text, function (t) {
+          t.timeoutAfter(500)
           match.fn(t, world, match.params)
         })
       }
